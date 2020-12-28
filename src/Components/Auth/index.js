@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import {Container} from 'react-bootstrap';
+
+const Wrap = styled(Container)`
+display: flex;
+justify-content: center;
+`
 
 const Auth = (props)=>{
 
 
   return(
-    <>
-    <h1>Auth will be Here</h1>
-    </>
+    <Wrap fluid >
+     <h2>Auth will Be here</h2>
+    </Wrap>
   )
 }
 
