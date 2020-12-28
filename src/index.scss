@@ -1,4 +1,6 @@
-html,body {
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+html,body, #root {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -15,4 +17,9 @@ html,body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 1280px;
 }

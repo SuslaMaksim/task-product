@@ -1,10 +1,11 @@
-import React from 'react' 
+import React from 'react';
+import {Container } from 'react-bootstrap'
 
 let  ProductCard = (props)=> {
   return (
-    <div >
+    <Container fluid >
      <h2>BodyCard</h2>
-    </div>
+    </Container>
   );
 }
 
