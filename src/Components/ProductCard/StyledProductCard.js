@@ -1,4 +1,4 @@
-import {Container,Row,Col,Image } from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import styled from 'styled-components';
 
 export const Wrap  = styled(Container)`

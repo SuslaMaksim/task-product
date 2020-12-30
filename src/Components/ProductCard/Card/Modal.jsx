@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal,Button} from 'react-bootstrap';
+import {Modal,Button,Form} from 'react-bootstrap';
 
 
 const FormModal= ({show,onClose})=>{
@@ -14,19 +14,28 @@ const FormModal= ({show,onClose})=>{
         keyboard={false}
         centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={()=> onClose(false)}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
-        </Modal.Footer>
+    
+          <Form>
+              <Modal.Header closeButton>
+                 <Modal.Title>Enter your Comment</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Comment</Form.Label>   
+                  <Form.Control as="textarea" rows={4} />
+                </Form.Group>
+                </Modal.Body>
+              <Modal.Footer>
+              <Button variant="secondary" onClick={()=> onClose(false)}>
+                   Close
+              </Button>
+              <Button variant="primary" onClick={()=> onClose(false)}>
+                  Added Comment
+              </Button>
+              </Modal.Footer>
+
+          </Form>
+
       </Modal>
     </>
   )
