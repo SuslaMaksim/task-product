@@ -1,12 +1,15 @@
-import {Header,BodyProducts,ProductCard,Auth,Registration} from './Components';
+import {BodyProductsContainer,ProductCard} from './Components';
+import Registration from './Components/Registration';
+import Header from './Components/Header';
+import Auth from './Components/Auth';
 import {Route,Switch} from 'react-router-dom'
 
-function App() {
+const  App = (props) => {
   return (
     <div className="App">
       <Header/>
       <Switch>
-        <Route exact path='/' component={()=> <BodyProducts/> }/>
+        <Route exact path='/' component={()=> <BodyProductsContainer/> }/>
         <Route exact path='/product/:id' component={()=> <ProductCard/> }/>
         <Route exact path='/auth' component={()=> <Auth/> }/>
         <Route exact path='/registration' component={()=> <Registration/> }/>

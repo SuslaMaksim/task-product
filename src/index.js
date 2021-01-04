@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {HashRouter} from 'react-router-dom';
-import store from './Store/Store';
+import store from './redux/Store';
 import {Provider} from "react-redux";
 
 ReactDOM.render(

@@ -1,20 +1,36 @@
-import React from 'react' ;
-import Card from './Card/Card'
-import {Container,Row} from 'react-bootstrap';
+import React,{useEffect} from 'react' ;
+import BodyProducts from './BodyProducts';
+import {connect } from 'react-redux';
+import {fetchProductDataCreator} from '../../redux/Reducers/MainReduser';
 
-let  BodyProducts = (props)=> {
+const  BodyProductsContainer = ({fetchProductDataCreator,productsData}) => {
+
+
+console.log(productsData)
+
+  useEffect(() => {
+
+    fetchProductDataCreator();
+
+  }, [fetchProductDataCreator]);
+
   return (
-    <Container fluid >
-      <Row >
-       <Card />
-       <Card/>
-       <Card/>
-       <Card/>
-       <Card/>
-       <Card/>
-      </Row>
-    </Container> 
+
+    <BodyProducts productsData = {productsData} /> 
+
   );
+
 }
 
-export default BodyProducts;
+let mapSetStateToProps = (state) => (
+
+  {
+    productsData: state.data.productData
+  }
+
+)
+
+
+
+
+export default connect(mapSetStateToProps,{fetchProductDataCreator})(BodyProductsContainer);
