@@ -7,7 +7,7 @@ let  BodyProducts = ({productsData}) => (
   
     <Container fluid >
       <RowContainer>    
-          {productsData && productsData.map(product => <Card key = {product.id}/>)}
+          {productsData && productsData.map(product => <Card key = {product.id} {...product}/>)}
       </RowContainer>
     </Container> 
 

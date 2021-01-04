@@ -6,8 +6,6 @@ import {fetchProductDataCreator} from '../../redux/Reducers/MainReduser';
 const  BodyProductsContainer = ({fetchProductDataCreator,productsData}) => {
 
 
-console.log(productsData)
-
   useEffect(() => {
 
     fetchProductDataCreator();
